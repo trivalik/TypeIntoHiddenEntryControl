@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TypeIntoHiddenEntryControl.ViewModel"
+             x:Class="TypeIntoHiddenEntryControl.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button Grid.Column="1" Command="{Binding ToggleMode}" Text="Toggle Visibility"/>
+            <Entry Text="{Binding Word}" IsVisible="{Binding IsModeActive}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
